@@ -1,0 +1,38 @@
+{% extends "template.html" %}
+{% block content %}
+      <!-- Container-fluid -->
+      <div class="container-fluid">
+        <!-- First comes a content container -->
+        <div class="content">
+          <h1 class="content-title font-size-22"> <!-- font-size-22 = font-size: 2.2rem (22px) -->
+            View recipes
+          </h1>
+        </div>
+        <!-- Loop through recipes db, create card for each recipe -->
+        {% for row in rows %}
+         
+        <!-- Next comes a card -->
+        <div class="card">
+          <h2 class="card-title font-size-22">
+            {{row["title"]}}
+          </h2>
+           <!-- Row with items aligned at the start -->
+  <div class="row align-items-start h-10"> <!-- align-items-start = align-items: flex-start, h-100 = height: 10rem (100px) -->
+    <div class="col">Total Time:  {{row["totaltime"]}}</div>
+
+    <div class="text-right"> <!-- text-right = text-align: right -->
+      <form action="/recipe" method="POST"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+        <div class="form-group">
+          <button class="btn btn-primary" name="recipeid" type="submit" value="{{row["id"]}}">See Recipe</button>
+        </div>
+      </div>
+      </div>
+
+  </div>         
+        {% endfor %}  
+        <!-- Finally ending with a content container (without title) -->
+        <div class="content">
+        </div>
+      </div>
+    </div>
+{% endblock %}

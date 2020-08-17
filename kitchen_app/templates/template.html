@@ -1,0 +1,59 @@
+<!-- Template used in each page for Navbars, page wrappers, etc. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Kitchen Companion: {{title}}</title>     <!-- Title passed via return template for each page -->
+   <!-- Halfmoon CSS -->
+   <link href="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.3/css/halfmoon.min.css" rel="stylesheet" />
+</head>
+<body class = dark-mode>
+
+  <!-- Page wrapper start -->
+  <div class="page-wrapper with-navbar">
+    
+    <!-- Sticky alerts (toasts), empty container -->
+    <div class="sticky-alerts"></div>
+        
+        <!-- Navbar start -->
+        <nav class="navbar">
+          <div class="navbar-content ml-auto">
+            <ul class="navbar-nav d-none d-md-flex"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+              <li class="nav-item ">
+                <a href="http://127.0.0.1:5000/" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://127.0.0.1:5000/view" class="nav-link">View Recipes</a>
+              </li>
+              <li class="nav-item ">
+                <a href="http://127.0.0.1:5000/add" class="nav-link">Add a Recipe</a>
+              </li>
+              <li class="nav-item">
+                <a href="http://127.0.0.1:5000/delete" class="nav-link">Delete a Recipe</a>
+              </li>
+              <button class="btn btn-primary" type="button" onclick="toggleDemo()">Dark/Light Mode</button>
+              <!-- JavaScript -->
+              <script type="text/javascript">
+              // Dark mode toggle demo
+                function toggleDemo() {
+                halfmoon.toggleDarkMode();
+                                      }
+              </script>
+            </ul>
+          </div>
+          </nav>
+          <!-- Navbar end -->
+
+    <!-- Content wrapper start -->
+    <div class="content-wrapper">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <!-- Content wrapper end -->
+</div>
+<!-- Page wrapper end -->
+<!-- Halfmoon JS -->
+<script src="https://cdn.jsdelivr.net/gh/halfmoonui/halfmoon@1.0.3/js/halfmoon.min.js"></script>
+</body>
+</html>

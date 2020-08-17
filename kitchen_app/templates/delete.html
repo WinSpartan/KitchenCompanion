@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="content">
+    <h1 class="content-title">
+      Let's delete some recipes - They probably weren't good anyway
+    </h1>
+    <p>
+     Enter the Recipe ID found in the 'See Recipe' link from the <a href="http://127.0.0.1:5000/view"target="_blank" rel="noopener">View Recipes page</a>.  This page was built as a functionality test and really isn't needed...will bake in the functionality elsewhere and remove this page in the future.
+    </p>
+  </div>
+          <!-- Next comes a card -->
+          <div class="card">
+            <h2 class="card-title">
+            </h2>
+
+            <form action="/deletestatus" method="post" class="w-800 mw-full form-inline"> <!-- w-400 = width: 40rem (400px), mw-full = max-width: 100% -->
+                <div class="form-group">
+                  <label name="recipe" class="required">Recipe ID</label>
+                  <input type="text" name="id" class="form-control" placeholder="1...or maybe 7." required="required">
+                  <input class="btn btn-primary" type="submit" value="Delete Recipe">
+          </div>
+          
+          <!-- Finally ending with a content container (without title) -->
+          <div class="content">
+          </div>
+
+</div>
+{% endblock %}

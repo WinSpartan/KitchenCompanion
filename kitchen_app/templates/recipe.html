@@ -1,0 +1,39 @@
+{% extends "template.html" %}
+{% block content %}
+      
+<!-- Container-fluid -->
+<div class="container-fluid">
+    <!-- First comes a content container -->
+    <div class="content">
+
+    </div>
+    <!-- Loop through recipes db, create card for each recipe -->
+    {% for singlerow in singlerow %}
+     
+    <!-- Next comes a card -->
+    <div class="card">
+      <h2 class="card-title font-size-22">
+        {{singlerow[1]}}
+      </h2>
+       <!-- singlerow with items aligned at the start -->
+<div class="singlerow align-items-start h-10"> <!-- align-items-start = align-items: flex-start, h-100 = height: 10rem (100px) -->
+<div class="col"><strong>Recipe ID:  </strong>{{singlerow[0]}}</div><br>
+<div class="col"><strong>Total Time:  </strong>{{singlerow[2]}}</div><br>
+<div class="col"><strong>Yields:  </strong>{{singlerow[3]}}</div><br>
+<div class="col"><strong>Ingredients:  </strong>{{singlerow[4]}}</div><br><br>
+<div class="col"><strong>Instructions:  </strong>{{singlerow[5]}}</div>
+
+  </div>
+
+</div>
+    {% endfor %}  
+    <!-- Finally ending with a content container (without title) -->
+    <div class="content">
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
+
