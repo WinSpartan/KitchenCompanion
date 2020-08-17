@@ -12,7 +12,7 @@ https://github.com/hhursev/recipe-scrapers
 # Demo
 Check out some of the screenshots below for a peek at the beginnings of the site
 
-![Screenshot](./demo/Annotation 2020-08-17 162904.png)
+![Screenshot](./demo/'Annotation 2020-08-17 162904.png')
 
 
 # TODO
