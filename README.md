@@ -12,6 +12,8 @@ https://github.com/hhursev/recipe-scrapers
 # Demo
 Check out some of the screenshots below for a peek at the beginnings of the site
 
+![Screenshot](./demo/Annotation 2020-08-17 162904.png)
+
 
 # TODO
 Actual CSS styling, bug fixes in app.py, refactoring, code indentation, recipe presentation, grid & flexbox layouts, search, toasts for add/deletions, unit conversions, much much more
